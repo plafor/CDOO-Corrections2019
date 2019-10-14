@@ -20,13 +20,16 @@ public class GuitarSpec extends InstrumentSpec {
 	 * une vrai guitare spec
 	 * 
 	 */
-	public boolean matches(GuitarSpec searchGuitar) {
+	@Override
+	public boolean matches(InstrumentSpec searchInstrument) {
 		boolean res = true;
-
-		if (!super.matches(searchGuitar)) {
+		
+		if (searchInstrument instanceof MandolinSpec) {
+			res = false;
+		} else if (!super.matches(searchInstrument)) {
 			res = false;
 		} else {
-			int numStrings = searchGuitar.getNumStrings();
+			int numStrings = ((GuitarSpec) searchInstrument).getNumStrings();
 
 			if (numStrings != GuitarSpec.NO_PREF_NUM_STRINGS && numStrings != getNumStrings()) {
 				res = false;

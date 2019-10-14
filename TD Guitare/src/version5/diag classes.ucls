@@ -57,52 +57,60 @@
   </class>  
   <class id="7" language="java" name="version5.Inventory" project="TD Guitare" 
     file="/TD Guitare/src/version5/Inventory.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="957" y="199"/>    
+    <position height="-1" width="-1" x="897" y="259"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="8">    
+  <generalization id="8">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <dependency id="9">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <generalization id="10">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="11">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <dependency id="12">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <association id="13">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="9" name="instruments"/>      
-      <multiplicity id="10" minimum="0" maximum="2147483647"/>    
+      <attribute id="14" name="instruments">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="15" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="11">    
+  <association id="16">    
     <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="12" name="specs"/>      
-      <multiplicity id="13" minimum="0" maximum="1"/>    
+      <attribute id="17" name="specs">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="18" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="14">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="3"/>  
-  </dependency>  
-  <dependency id="15">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="2"/>  
-  </dependency>  
-  <generalization id="16">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="4"/>  
-  </generalization>  
-  <generalization id="17">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="4"/>  
-  </generalization>  
-  <generalization id="18">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="1"/>  
-  </generalization>  
   <generalization id="19">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="1"/>  
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="4"/>  
   </generalization>  
   <classifier-display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    

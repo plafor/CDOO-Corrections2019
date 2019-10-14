@@ -12,14 +12,18 @@ public class MandolinSpec extends InstrumentSpec {
 	public Style getStyle() {
 		return style;
 	}
-	
-	public boolean matches(InstrumentSpec searchMandolin) {
+
+	@Override
+	public boolean matches(InstrumentSpec searchInstrument) {
 		boolean res = true;
 
-		if (!super.matches(searchMandolin)) {
+		if (searchInstrument instanceof GuitarSpec) {
+			res = false;
+		} else if (!super.matches(searchInstrument)) {
 			res = false;
 		} else {
-			Style style = searchMandolin.getStyle();
+
+			Style style = ((MandolinSpec) searchInstrument).getStyle();
 
 			if (style != null && style != getStyle()) {
 				res = false;
@@ -28,5 +32,5 @@ public class MandolinSpec extends InstrumentSpec {
 
 		return res;
 	}
-	
+
 }
